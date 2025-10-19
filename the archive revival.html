@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Archive Revival - Pre-Owned Luxury</title>
+    <!-- Load Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter as the primary font and fallback to a serif font for titles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        /* Custom styles to define the grey/white opulent theme */
+        :root {
+            --color-primary-dark: #292929; /* Charcoal Grey (Near Black) */
+            --color-secondary-light: #F8F8F8; /* Off-White/Stone */
+            --font-body: 'Inter', sans-serif;
+            --font-display: 'Didot', 'Georgia', serif; /* Opulent Serif Look */
+        }
+        body {
+            font-family: var(--font-body);
+            background-color: white;
+            color: var(--color-primary-dark);
+            scroll-behavior: smooth;
+        }
+        .opulent-title {
+            font-family: var(--font-display);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        .nav-link:hover {
+            color: #9c9c9c;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <!-- Logo -->
+            <a href="#home" class="text-xl font-bold opulent-title transition duration-300 hover:opacity-75">
+                The Archive Revival
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-10 text-sm font-medium uppercase tracking-widest">
+                <a href="#featured" class="nav-link transition duration-200">Shop</a>
+                <a href="#consign" class="nav-link transition duration-200">Consign</a>
+                <a href="#about" class="nav-link transition duration-200">About</a>
+                <a href="#contact" class="nav-link transition duration-200">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button (using SVG icon) -->
+            <button id="mobile-menu-button" class="md:hidden p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay (Hidden by Default) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white border-t border-stone-100">
+            <nav class="flex flex-col space-y-3 p-4 text-base tracking-wider">
+                <a href="#featured" class="nav-link py-2 border-b border-stone-50">Shop</a>
+                <a href="#consign" class="nav-link py-2 border-b border-stone-50">Consign</a>
+                <a href="#about" class="nav-link py-2 border-b border-stone-50">About</a>
+                <a href="#contact" class="nav-link py-2">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section (Minimalist & High Contrast) -->
+    <main id="home">
+        <section class="relative h-[80vh] flex items-center justify-center bg-stone-100 overflow-hidden">
+            <!-- Background Text/Watermark Effect (Opulence) -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <h1 class="text-[12rem] md:text-[20rem] text-stone-200 opacity-5 font-bold opulent-title select-none">LUXE</h1>
+            </div>
+
+            <div class="z-10 text-center max-w-3xl p-6">
+                <p class="text-sm uppercase tracking-[0.2em] text-stone-500 mb-4">Timeless Treasures, Elevated</p>
+                <h2 class="text-4xl md:text-6xl font-light opulent-title mb-8 leading-tight">
+                    Discover Your Next <span class="font-bold">Masterpiece</span>
+                </h2>
+                <a href="#featured" class="inline-block px-10 py-4 bg-white text-stone-800 border-2 border-stone-800
+                                          uppercase text-sm tracking-widest font-medium rounded-md
+                                          shadow-lg hover:bg-stone-800 hover:text-white transition duration-300 ease-in-out">
+                    Shop The Latest Edit
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Featured Items Grid -->
+        <section id="featured" class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-3xl md:text-4xl text-center mb-12 opulent-title font-light">
+                    The Current Edit
+                </h3>
+
+                <!-- Product Grid (Responsive 2x2 on Mobile, 3x3 on Desktop) -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
+
+                    <!-- Mock Product 1 -->
+                    <div class="group relative overflow-hidden bg-stone-50 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+                        <div class="h-64 md:h-80 bg-stone-200 flex items-center justify-center text-stone-500">
+                            <!-- Placeholder Image -->
+                            <img src="https://placehold.co/600x800/292929/ffffff?text=CHANEL+BAG" alt="Vintage Chanel Flap Bag" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-4 text-center">
+                            <p class="text-sm font-medium tracking-wide">Vintage Chanel Flap Bag</p>
+                            <p class="text-lg font-bold mt-1 text-stone-800">$4,850</p>
+                            <button class="mt-3 w-full py-2 border border-stone-300 text-xs uppercase tracking-wider rounded-md hover:bg-stone-800 hover:text-white transition duration-200">View Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Mock Product 2 -->
+                    <div class="group relative overflow-hidden bg-stone-50 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+                        <div class="h-64 md:h-80 bg-stone-200 flex items-center justify-center text-stone-500">
+                            <!-- Placeholder Image -->
+                            <img src="https://placehold.co/600x800/292929/ffffff?text=HERMES+SCARF" alt="Hermès Silk Scarf" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-4 text-center">
+                            <p class="text-sm font-medium tracking-wide">Hermès 'Carré' Silk Scarf</p>
+                            <p class="text-lg font-bold mt-1 text-stone-800">$425</p>
+                            <button class="mt-3 w-full py-2 border border-stone-300 text-xs uppercase tracking-wider rounded-md hover:bg-stone-800 hover:text-white transition duration-200">View Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Mock Product 3 -->
+                    <div class="group relative overflow-hidden bg-stone-50 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+                        <div class="h-64 md:h-80 bg-stone-200 flex items-center justify-center text-stone-500">
+                            <!-- Placeholder Image -->
+                            <img src="https://placehold.co/600x800/292929/ffffff?text=PRADA+LOAFERS" alt="Prada Leather Loafers" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-4 text-center">
+                            <p class="text-sm font-medium tracking-wide">Prada Croc-Embossed Loafers</p>
+                            <p class="text-lg font-bold mt-1 text-stone-800">$610</p>
+                            <button class="mt-3 w-full py-2 border border-stone-300 text-xs uppercase tracking-wider rounded-md hover:bg-stone-800 hover:text-white transition duration-200">View Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Mock Product 4 (Hidden on Mobile) -->
+                    <div class="hidden md:block group relative overflow-hidden bg-stone-50 rounded-lg shadow-xl hover:shadow-2xl transition duration-300">
+                        <div class="h-80 bg-stone-200 flex items-center justify-center text-stone-500">
+                            <!-- Placeholder Image -->
+                            <img src="https://placehold.co/600x800/292929/ffffff?text=DESIGNER+DRESS" alt="Evening Gown" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="p-4 text-center">
+                            <p class="text-sm font-medium tracking-wide">Exclusive Evening Gown</p>
+                            <p class="text-lg font-bold mt-1 text-stone-800">$1,599</p>
+                            <button class="mt-3 w-full py-2 border border-stone-300 text-xs uppercase tracking-wider rounded-md hover:bg-stone-800 hover:text-white transition duration-200">View Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <button class="px-8 py-3 bg-stone-800 text-white uppercase text-sm tracking-widest font-medium rounded-md shadow-lg hover:bg-stone-700 transition duration-300">
+                        See All Inventory
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Consignment Process (How It Works) -->
+        <section id="consign" class="py-16 md:py-24 bg-stone-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-3xl md:text-4xl text-center mb-16 opulent-title font-light">
+                    Sell With Us
+                </h3>
+                <div class="grid md:grid-cols-3 gap-10 text-center">
+                    <!-- Step 1 -->
+                    <div class="p-6">
+                        <div class="text-5xl mb-4 font-bold text-stone-800 opulent-title">01</div>
+                        <h4 class="text-xl font-semibold mb-3 tracking-wide">Submit</h4>
+                        <p class="text-stone-600">Share details and images of your items. Our team provides a preliminary valuation within 24 hours.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="p-6">
+                        <div class="text-5xl mb-4 font-bold text-stone-800 opulent-title">02</div>
+                        <h4 class="text-xl font-semibold mb-3 tracking-wide">Authenticate</h4>
+                        <p class="text-stone-600">Send us the piece. We rigorously authenticate and professionally photograph it in our studio.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="p-6">
+                        <div class="text-5xl mb-4 font-bold text-stone-800 opulent-title">03</div>
+                        <h4 class="text-xl font-semibold mb-3 tracking-wide">Earn</h4>
+                        <p class="text-stone-600">Your item is listed in our exclusive edit, reaching a global luxury clientele. Receive up to 80% commission.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                     <button class="px-8 py-3 border-2 border-stone-800 text-stone-800 bg-transparent uppercase text-sm tracking-widest font-medium rounded-md hover:bg-stone-800 hover:text-white transition duration-300">
+                        Start Consignment
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. About Us & Mission Statement (Minimalist Text Block) -->
+        <section id="about" class="py-20 md:py-28 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-3xl md:text-5xl font-light opulent-title mb-8 leading-snug">
+                    Where Luxury Finds a New Legacy
+                </h3>
+                <p class="text-lg leading-relaxed text-stone-700 mb-6">
+                    The Archive Revival is founded on the belief that true luxury is enduring. We meticulously source and verify pre-owned designer pieces, offering them a second life in a curated, high-end marketplace. Our commitment is to uncompromised authenticity, exceptional quality, and a seamless experience for both the discerning buyer and the dedicated consignor.
+                </p>
+                <p class="text-md font-medium uppercase tracking-widest text-stone-800">
+                    Curated. Verified. Elevated.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-stone-800 text-stone-300 py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-stone-700 pb-10 mb-10">
+
+            <!-- Col 1: Logo & Info -->
+            <div>
+                <h4 class="text-lg font-bold opulent-title text-white mb-4">The Archive Revival</h4>
+                <p class="text-sm">24/7 Global Luxury Resale</p>
+                <p class="text-sm mt-1">support@archiverevival.co</p>
+            </div>
+
+            <!-- Col 2: Customer Care -->
+            <div>
+                <h4 class="text-sm font-semibold uppercase tracking-wider mb-4 text-white">Customer Care</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition duration-200">Shipping & Returns</a></li>
+                    <li><a href="#" class="hover:text-white transition duration-200">Authenticity Guarantee</a></li>
+                    <li><a href="#" class="hover:text-white transition duration-200">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Company -->
+            <div>
+                <h4 class="text-sm font-semibold uppercase tracking-wider mb-4 text-white">Company</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#about" class="hover:text-white transition duration-200">Our Story</a></li>
+                    <li><a href="#consign" class="hover:text-white transition duration-200">Consignment Program</a></li>
+                    <li><a href="#" class="hover:text-white transition duration-200">Careers</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Newsletter -->
+            <div class="col-span-2 md:col-span-1">
+                <h4 class="text-sm font-semibold uppercase tracking-wider mb-4 text-white">The Edit Newsletter</h4>
+                <p class="text-sm mb-4">Be the first to know about new arrivals.</p>
+                <form onsubmit="event.preventDefault(); document.getElementById('newsletter-msg').classList.remove('hidden');" class="flex flex-col space-y-3">
+                    <input type="email" placeholder="Enter your email" required
+                           class="p-2 border border-stone-600 bg-stone-700 text-white placeholder-stone-400 rounded-md focus:outline-none focus:border-white">
+                    <button type="submit" class="p-2 bg-white text-stone-800 text-sm font-medium uppercase tracking-wider rounded-md hover:opacity-90 transition duration-200">
+                        Subscribe
+                    </button>
+                    <p id="newsletter-msg" class="text-xs text-stone-400 hidden">Thank you for subscribing to our exclusive mailing list!</p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
+            <p class="text-xs tracking-wider">&copy; 2025 The Archive Revival. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = mobileMenu.querySelectorAll('a');
+
+            // 1. Mobile Menu Toggle Logic
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // 2. Hide Mobile Menu when a link is clicked (for smooth scrolling)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // 3. Smooth Scrolling (Built into CSS: scroll-behavior: smooth;)
+            // Ensure internal links work for a single-page layout
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    // Only prevent default if we're targeting a section on the same page
+                    if (this.hash.length > 0 && this.pathname === window.location.pathname) {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(this.hash);
+                        if (targetElement) {
+                            // Scroll to the target element's top position, compensating for the fixed header
+                            const headerHeight = document.querySelector('header').offsetHeight;
+                            const targetPosition = targetElement.offsetTop - headerHeight;
+
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
